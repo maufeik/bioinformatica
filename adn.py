@@ -34,12 +34,22 @@ def complemetar_cadena(cadena):
         cadena_nueva.append('C')
     return cadena_nueva
 
-secuencia=cadena_random(40)
+secuencia=cadena_random(4)
 print(secuencia)
  
 print(validar_cadena(secuencia))
 
 print(complemetar_cadena(secuencia))
         
-        
-                  
+def invertir_cadena(cadena): 
+ cadena_invertirda=''.join((sorted(cadena)))
+ return cadena_invertirda
+
+def complementario_invertido(cadena):
+   cadena_invertida_complementaria=complemetar_cadena(invertir_cadena(cadena))
+   return cadena_invertida_complementaria
+   
+   
+
+print(invertir_cadena(secuencia))
+print(complementario_invertido(secuencia))
